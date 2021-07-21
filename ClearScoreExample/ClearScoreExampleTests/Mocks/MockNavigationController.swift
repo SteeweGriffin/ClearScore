@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 @testable import ClearScoreExample
 
-final class MockNavigationController: NavigationControllerProtocol {
+final class MockNavigationController: NavigationControllerType {
 
     private(set) var setControllerAsRootCallsCount = 0
     private(set) var pushControllerCallsCount = 0

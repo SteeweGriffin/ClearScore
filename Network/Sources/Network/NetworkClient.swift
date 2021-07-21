@@ -8,15 +8,15 @@
 import Foundation
 import Combine
 
-public protocol NetworkClientProtocol: AnyObject {
+public protocol NetworkClientType: AnyObject {
     func request(endPoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError>
 }
 
-public final class NetworkClient: NetworkClientProtocol {
+public final class NetworkClient: NetworkClientType {
 
     // MARK: - Private properties
 
-    private let urlSession: URLSessionProtocol
+    private let urlSession: URLSessionType
 
     private enum StatusCode {
         static let error = 300
@@ -24,7 +24,7 @@ public final class NetworkClient: NetworkClientProtocol {
 
     // MARK: - Public methods
 
-    public init(session: URLSessionProtocol = URLSession.shared) {
+    public init(session: URLSessionType = URLSession.shared) {
         urlSession = session
     }
 
@@ -34,7 +34,7 @@ public final class NetworkClient: NetworkClientProtocol {
         }
         return urlSession.dataTaskPublisherWith(request: request)
             .tryMap { (data, response) in
-                guard let urlResponse = response as? HTTPURLResponseProtocol else {
+                guard let urlResponse = response as? HTTPURLResponseType else {
                     throw NetworkError.unvailableResponse
                 }
                 let networkResponse = NetworkResponse.makeNetworkResponse(with: urlResponse, data: data)
@@ -44,12 +44,7 @@ public final class NetworkClient: NetworkClientProtocol {
                 return networkResponse
             }
             .mapError{ error in
-                if let myError = error as? NetworkError {
-                    return myError
-                } else {
-                    return NetworkError.unknown(error)
-                }
-                
+                return error as? NetworkError ?? NetworkError.unknown(error)
             }
            .eraseToAnyPublisher()
     }

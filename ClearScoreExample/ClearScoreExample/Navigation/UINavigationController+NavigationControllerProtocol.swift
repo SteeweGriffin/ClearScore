@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol NavigationControllerProtocol {
+protocol NavigationControllerType {
     func setControllerAsRoot(_ controller: UIViewController)
     func pushController(_ controller: UIViewController, animated: Bool)
     func presentController(_ controller: UIViewController, animated: Bool)
 }
 
-extension UINavigationController: NavigationControllerProtocol {
+extension UINavigationController: NavigationControllerType {
 
     func setControllerAsRoot(_ controller: UIViewController) {
         setViewControllers([controller], animated: false)

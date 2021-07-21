@@ -17,13 +17,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Color.background.uiColor
         title = "Dashboard"
-        
-        let baseURL = URL(string: "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com")!
-        let path = "/prod/mockcredit/values"
-        let endpoint = Endpoint(baseURL: baseURL, path: path, parameters: nil, method: .get)
-        
+
         subscriptions.forEach { $0.cancel() }
-        NetworkClient().request(endPoint: endpoint)
+        UserRepository().fetchUser()
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -31,10 +27,8 @@ class ViewController: UIViewController {
                 case .failure(let error):
                     print(error)
                 }
-            } receiveValue: { response in
-                let mapper = UserMapper()
-                let user = mapper.map(body: response.payload)
-                print(user)
+            } receiveValue: { value in
+                print(value)
             }.store(in: &subscriptions)
 
     }

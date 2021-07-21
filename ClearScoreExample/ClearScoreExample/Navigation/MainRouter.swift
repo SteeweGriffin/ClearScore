@@ -18,18 +18,17 @@ struct MainRouter: MainRouterProtocol {
 
     // MARK: - Private properties
 
-    private let navigation: NavigationControllerProtocol
+    private let navigation: NavigationControllerType
 
     // MARK: - Public methods
 
-    init(with navigation: NavigationControllerProtocol) {
+    init(with navigation: NavigationControllerType) {
         self.navigation = navigation
     }
 
     func displayDashboard() {
-//        let viewModel = ListRocketsViewModel()
-//        let controller = ListRocketsTableViewController(input: viewModel, navigation: self)
-        let controller = ViewController()
+        let viewModel = DashboardViewModel()
+        let controller = DashboardViewController(input: viewModel, navigation: self)
         navigation.setControllerAsRoot(controller)
     }
     

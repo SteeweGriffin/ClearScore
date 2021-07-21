@@ -13,7 +13,7 @@ public struct NetworkResponse: Equatable {
 }
 
 public extension NetworkResponse {
-    static func makeNetworkResponse(with urlResponse: HTTPURLResponseProtocol, data: Data) ->  NetworkResponse {
+    static func makeNetworkResponse(with urlResponse: HTTPURLResponseType, data: Data) ->  NetworkResponse {
         return NetworkResponse(statusCode: urlResponse.statusCode, payload: data)
     }
 }

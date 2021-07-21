@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol UserMapperProtocol {
+protocol UserMapperType {
     func map(body: Data) -> User?
 }
 
-struct UserMapper: UserMapperProtocol {
+struct UserMapper: UserMapperType {
 
     func map(body: Data) -> User? {
         let decoder = JSONDecoder()

@@ -7,19 +7,19 @@
 
 import Foundation
 
-public protocol URLSessionProtocol: AnyObject {
+public protocol URLSessionType: AnyObject {
     func dataTaskPublisherWith(request: URLRequest) -> URLSession.DataTaskPublisher
 }
 
-public protocol HTTPURLResponseProtocol: AnyObject {
+public protocol HTTPURLResponseType: AnyObject {
     var statusCode: Int { get }
 }
 
-extension URLSession: URLSessionProtocol {
+extension URLSession: URLSessionType {
     public func dataTaskPublisherWith(request: URLRequest) -> URLSession.DataTaskPublisher {
         return dataTaskPublisher(for: request)
     }
 }
 
-extension HTTPURLResponse: HTTPURLResponseProtocol {}
+extension HTTPURLResponse: HTTPURLResponseType {}
 
