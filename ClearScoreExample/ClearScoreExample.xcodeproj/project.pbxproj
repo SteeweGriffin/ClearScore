@@ -12,8 +12,18 @@
 		0B44398126A6DD770065FD42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44398026A6DD770065FD42 /* ViewController.swift */; };
 		0B44398626A6DD7A0065FD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B44398526A6DD7A0065FD42 /* Assets.xcassets */; };
 		0B44398926A6DD7A0065FD42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B44398726A6DD7A0065FD42 /* LaunchScreen.storyboard */; };
-		0B44399426A6DD7A0065FD42 /* ClearScoreExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44399326A6DD7A0065FD42 /* ClearScoreExampleTests.swift */; };
 		0B70B38926A6DE870020EAB9 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 0B70B38826A6DE870020EAB9 /* Network */; };
+		0B70B39226A844AB0020EAB9 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B39126A844AB0020EAB9 /* MainRouter.swift */; };
+		0B70B39426A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B39326A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift */; };
+		0B70B39626A845160020EAB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B39526A845160020EAB9 /* User.swift */; };
+		0B70B3A526A8524D0020EAB9 /* CaseIterableLastUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3A426A8524D0020EAB9 /* CaseIterableLastUnknown.swift */; };
+		0B70B3A726A854140020EAB9 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3A626A854140020EAB9 /* UserMapper.swift */; };
+		0B70B3AA26A85C4E0020EAB9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3A926A85C4E0020EAB9 /* Color.swift */; };
+		0B70B3AF26A85F780020EAB9 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3AE26A85F780020EAB9 /* ColorTests.swift */; };
+		0B70B3B226A861250020EAB9 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3B126A861250020EAB9 /* MainRouterTests.swift */; };
+		0B70B3B526A861A50020EAB9 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3B426A861A50020EAB9 /* MockNavigationController.swift */; };
+		0B70B3B726A861F50020EAB9 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3B626A861F50020EAB9 /* MockUser.swift */; };
+		0B70B3BA26A862A70020EAB9 /* UserMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3B926A862A70020EAB9 /* UserMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +45,18 @@
 		0B44398826A6DD7A0065FD42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B44398A26A6DD7A0065FD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B44398F26A6DD7A0065FD42 /* ClearScoreExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B44399326A6DD7A0065FD42 /* ClearScoreExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreExampleTests.swift; sourceTree = "<group>"; };
 		0B44399526A6DD7A0065FD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B70B39126A844AB0020EAB9 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		0B70B39326A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+NavigationControllerProtocol.swift"; sourceTree = "<group>"; };
+		0B70B39526A845160020EAB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B70B3A426A8524D0020EAB9 /* CaseIterableLastUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableLastUnknown.swift; sourceTree = "<group>"; };
+		0B70B3A626A854140020EAB9 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
+		0B70B3A926A85C4E0020EAB9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0B70B3AE26A85F780020EAB9 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		0B70B3B126A861250020EAB9 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
+		0B70B3B426A861A50020EAB9 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		0B70B3B626A861F50020EAB9 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		0B70B3B926A862A70020EAB9 /* UserMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +100,13 @@
 		0B44397B26A6DD770065FD42 /* ClearScoreExample */ = {
 			isa = PBXGroup;
 			children = (
-				0B44397C26A6DD770065FD42 /* AppDelegate.swift */,
-				0B44397E26A6DD770065FD42 /* SceneDelegate.swift */,
+				0B70B3A326A8523C0020EAB9 /* Utility */,
+				0B70B39026A844990020EAB9 /* Navigation */,
+				0B70B38F26A844760020EAB9 /* Models */,
+				0B70B38C26A844380020EAB9 /* Screens */,
+				0B70B38B26A843E90020EAB9 /* Resources */,
+				0B70B38A26A843D90020EAB9 /* Main */,
 				0B44398026A6DD770065FD42 /* ViewController.swift */,
-				0B44398526A6DD7A0065FD42 /* Assets.xcassets */,
-				0B44398726A6DD7A0065FD42 /* LaunchScreen.storyboard */,
-				0B44398A26A6DD7A0065FD42 /* Info.plist */,
 			);
 			path = ClearScoreExample;
 			sourceTree = "<group>";
@@ -93,7 +114,10 @@
 		0B44399226A6DD7A0065FD42 /* ClearScoreExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B44399326A6DD7A0065FD42 /* ClearScoreExampleTests.swift */,
+				0B70B3B326A861900020EAB9 /* Mocks */,
+				0B70B3B826A8628F0020EAB9 /* Models */,
+				0B70B3B026A860F30020EAB9 /* Navigation */,
+				0B70B3AB26A85F400020EAB9 /* Utility */,
 				0B44399526A6DD7A0065FD42 /* Info.plist */,
 			);
 			path = ClearScoreExampleTests;
@@ -104,6 +128,108 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B70B38A26A843D90020EAB9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0B44397E26A6DD770065FD42 /* SceneDelegate.swift */,
+				0B44397C26A6DD770065FD42 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0B70B38B26A843E90020EAB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B44398A26A6DD7A0065FD42 /* Info.plist */,
+				0B44398726A6DD7A0065FD42 /* LaunchScreen.storyboard */,
+				0B44398526A6DD7A0065FD42 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B70B38C26A844380020EAB9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B38E26A844490020EAB9 /* Detail */,
+				0B70B38D26A8443F0020EAB9 /* Dashboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0B70B38D26A8443F0020EAB9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		0B70B38E26A844490020EAB9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0B70B38F26A844760020EAB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B39526A845160020EAB9 /* User.swift */,
+				0B70B3A626A854140020EAB9 /* UserMapper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B70B39026A844990020EAB9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B39126A844AB0020EAB9 /* MainRouter.swift */,
+				0B70B39326A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0B70B3A326A8523C0020EAB9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3A426A8524D0020EAB9 /* CaseIterableLastUnknown.swift */,
+				0B70B3A926A85C4E0020EAB9 /* Color.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0B70B3AB26A85F400020EAB9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3AE26A85F780020EAB9 /* ColorTests.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0B70B3B026A860F30020EAB9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3B126A861250020EAB9 /* MainRouterTests.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0B70B3B326A861900020EAB9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3B426A861A50020EAB9 /* MockNavigationController.swift */,
+				0B70B3B626A861F50020EAB9 /* MockUser.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0B70B3B826A8628F0020EAB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3B926A862A70020EAB9 /* UserMapperTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +287,7 @@
 					};
 					0B44398E26A6DD7A0065FD42 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 0B44397826A6DD770065FD42;
 					};
 				};
@@ -208,9 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B70B39426A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift in Sources */,
 				0B44398126A6DD770065FD42 /* ViewController.swift in Sources */,
+				0B70B39626A845160020EAB9 /* User.swift in Sources */,
+				0B70B39226A844AB0020EAB9 /* MainRouter.swift in Sources */,
 				0B44397D26A6DD770065FD42 /* AppDelegate.swift in Sources */,
+				0B70B3A526A8524D0020EAB9 /* CaseIterableLastUnknown.swift in Sources */,
 				0B44397F26A6DD770065FD42 /* SceneDelegate.swift in Sources */,
+				0B70B3A726A854140020EAB9 /* UserMapper.swift in Sources */,
+				0B70B3AA26A85C4E0020EAB9 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +351,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B44399426A6DD7A0065FD42 /* ClearScoreExampleTests.swift in Sources */,
+				0B70B3AF26A85F780020EAB9 /* ColorTests.swift in Sources */,
+				0B70B3B226A861250020EAB9 /* MainRouterTests.swift in Sources */,
+				0B70B3B726A861F50020EAB9 /* MockUser.swift in Sources */,
+				0B70B3B526A861A50020EAB9 /* MockNavigationController.swift in Sources */,
+				0B70B3BA26A862A70020EAB9 /* UserMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +504,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLZ958R72S;
-				INFOPLIST_FILE = ClearScoreExample/Info.plist;
+				INFOPLIST_FILE = ClearScoreExample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLZ958R72S;
-				INFOPLIST_FILE = ClearScoreExample/Info.plist;
+				INFOPLIST_FILE = ClearScoreExample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +540,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLZ958R72S;
 				INFOPLIST_FILE = ClearScoreExampleTests/Info.plist;
@@ -414,6 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Steewe.ClearScoreExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClearScoreExample.app/ClearScoreExample";
@@ -425,6 +564,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLZ958R72S;
 				INFOPLIST_FILE = ClearScoreExampleTests/Info.plist;

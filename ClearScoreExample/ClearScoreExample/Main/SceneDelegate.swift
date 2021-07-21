@@ -21,8 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeRoot() -> UIViewController {
-        let controller = ViewController()
-        let navigation = UINavigationController(rootViewController: controller)
+        let navigation = UINavigationController()
+        let router = MainRouter(with: navigation)
+        router.displayDashboard()
         return navigation
     }
 

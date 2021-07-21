@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = Color.background.uiColor
+        title = "Dashboard"
         
         let baseURL = URL(string: "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com")!
         let path = "/prod/mockcredit/values"
@@ -30,8 +31,10 @@ class ViewController: UIViewController {
                 case .failure(let error):
                     print(error)
                 }
-            } receiveValue: { resonse in
-                print(resonse.payload)
+            } receiveValue: { response in
+                let mapper = UserMapper()
+                let user = mapper.map(body: response.payload)
+                print(user)
             }.store(in: &subscriptions)
 
     }
