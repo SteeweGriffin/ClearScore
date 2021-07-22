@@ -12,13 +12,13 @@ final class EndPointTests: XCTestCase {
 
     private var sut: Endpoint!
 
-    override func setUp() {
-        super.setUp()
+    override func setUpWithError() throws {
+        try super.setUpWithError()
     }
 
-    override func tearDown() {
+    override func tearDownWithError() throws {
         sut = nil
-        super.tearDown()
+        try super.tearDownWithError()
     }
 
     // MARK: - Tests

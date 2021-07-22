@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B036D6326A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */; };
+		0B036D6526A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6426A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift */; };
+		0B036D6826A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6726A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift */; };
 		0B44397D26A6DD770065FD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44397C26A6DD770065FD42 /* AppDelegate.swift */; };
 		0B44397F26A6DD770065FD42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44397E26A6DD770065FD42 /* SceneDelegate.swift */; };
 		0B44398126A6DD770065FD42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44398026A6DD770065FD42 /* ViewController.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableLastUnknownTests.swift; sourceTree = "<group>"; };
+		0B036D6426A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensionTests.swift; sourceTree = "<group>"; };
+		0B036D6726A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordCircleViewModelTests.swift; sourceTree = "<group>"; };
 		0B44397926A6DD770065FD42 /* ClearScoreExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScoreExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B44397C26A6DD770065FD42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B44397E26A6DD770065FD42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B036D6626A9D74000BD03D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B036D6726A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0B44397026A6DD770065FD42 = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +205,7 @@
 		0B70B38D26A8443F0020EAB9 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				0B70B3CD26A96F360020EAB9 /* ViewComponents */,
+				0B70B3CD26A96F360020EAB9 /* Components */,
 				0B70B3C226A886320020EAB9 /* DashboardViewModel.swift */,
 				0B70B3C426A886420020EAB9 /* DashboardViewController.swift */,
 			);
@@ -238,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				0B70B3AE26A85F780020EAB9 /* ColorTests.swift */,
+				0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -246,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				0B70B3B126A861250020EAB9 /* MainRouterTests.swift */,
+				0B036D6426A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -286,13 +302,13 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		0B70B3CD26A96F360020EAB9 /* ViewComponents */ = {
+		0B70B3CD26A96F360020EAB9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				0B70B3CE26A96F4D0020EAB9 /* DashboardCircleView.swift */,
 				0B70B3D326A982770020EAB9 /* DashboardCircleViewModel.swift */,
 			);
-			path = ViewComponents;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		0B70B3D726A9991F0020EAB9 /* Screens */ = {
@@ -306,6 +322,7 @@
 		0B70B3D826A999270020EAB9 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0B036D6626A9D74000BD03D2 /* Components */,
 				0B70B3D926A9993E0020EAB9 /* DashboardViewModelTests.swift */,
 			);
 			path = Dashboard;
@@ -442,12 +459,15 @@
 				0B70B3CA26A95FED0020EAB9 /* MockUserMapper.swift in Sources */,
 				0B70B3AF26A85F780020EAB9 /* ColorTests.swift in Sources */,
 				0B70B3B226A861250020EAB9 /* MainRouterTests.swift in Sources */,
+				0B036D6326A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift in Sources */,
 				0B70B3DA26A9993E0020EAB9 /* DashboardViewModelTests.swift in Sources */,
 				0B70B3B726A861F50020EAB9 /* MockUser.swift in Sources */,
+				0B036D6526A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift in Sources */,
 				0B70B3B526A861A50020EAB9 /* MockNavigationController.swift in Sources */,
 				0B70B3CC26A960450020EAB9 /* MockNetworkClient.swift in Sources */,
 				0B70B3C826A95FC40020EAB9 /* UserRepositoryTests.swift in Sources */,
 				0B70B3BA26A862A70020EAB9 /* UserMapperTests.swift in Sources */,
+				0B036D6826A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

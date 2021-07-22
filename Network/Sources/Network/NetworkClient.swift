@@ -19,7 +19,7 @@ public final class NetworkClient: NetworkClientType {
     private let urlSession: URLSessionType
 
     private enum StatusCode {
-        static let error = 300
+        static let error = 0..<300
     }
 
     // MARK: - Public methods
@@ -38,7 +38,7 @@ public final class NetworkClient: NetworkClientType {
                     throw NetworkError.unvailableResponse
                 }
                 let networkResponse = NetworkResponse.makeNetworkResponse(with: urlResponse, data: data)
-                if urlResponse.statusCode >= StatusCode.error {
+                guard StatusCode.error ~= urlResponse.statusCode else {
                     throw NetworkError.endpointError(networkResponse)
                 }
                 return networkResponse
