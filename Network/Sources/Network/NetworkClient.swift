@@ -35,7 +35,7 @@ public final class NetworkClient: NetworkClientType {
         return urlSession.dataTaskPublisherWith(request: request)
             .tryMap { (data, response) in
                 guard let urlResponse = response as? HTTPURLResponseType else {
-                    throw NetworkError.unvailableResponse
+                    throw NetworkError.unavailableResponse
                 }
                 let networkResponse = NetworkResponse.makeNetworkResponse(with: urlResponse, data: data)
                 guard StatusCode.error ~= urlResponse.statusCode else {
@@ -48,8 +48,4 @@ public final class NetworkClient: NetworkClientType {
             }
            .eraseToAnyPublisher()
     }
-}
-
-struct MyClass: Decodable {
-    
 }

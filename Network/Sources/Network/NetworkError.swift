@@ -11,7 +11,7 @@ public enum NetworkError: Error {
     case unknown(Error)
     case unavailablePath
     case unavailableData
-    case unvailableResponse
+    case unavailableResponse
     case endpointError(NetworkResponse)
 }
 
@@ -21,7 +21,7 @@ extension NetworkError: Equatable {
         case (unknown(_), unknown(_)),
              (unavailablePath, unavailablePath),
              (unavailableData, unavailableData),
-             (unvailableResponse, unvailableResponse):
+             (unavailableResponse, unavailableResponse):
             return true
         case (endpointError(let lhsNetworkResponse), endpointError(let rhsNetworkResposne)):
             return lhsNetworkResponse == rhsNetworkResposne

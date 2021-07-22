@@ -67,7 +67,7 @@ final class DashboardViewModel: DashboardViewModelType {
                 }
         } receiveValue: { [weak self] user in
             self?.user = user
-            let circleViewModel = DashbaordCircleViewModel(creditReportInfo: user.creditReportInfo)
+            let circleViewModel = DashboardCircleViewModel(creditReportInfo: user.creditReportInfo)
             self?.state = .dataAvailable(viewModel: circleViewModel)
         }.store(in: &cancellables)
 

@@ -14,7 +14,7 @@ protocol DashboardCircleViewModelType {
     var valuePercentage: Float { get }
 }
 
-struct DashbaordCircleViewModel: DashboardCircleViewModelType {
+struct DashboardCircleViewModel: DashboardCircleViewModelType {
     
     // MARK: - Private properties
     

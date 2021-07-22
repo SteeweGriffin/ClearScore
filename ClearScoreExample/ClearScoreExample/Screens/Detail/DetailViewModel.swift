@@ -31,7 +31,7 @@ struct DetailViewModel: DetailViewModelType {
     var currentLongTermDebt: (title: String, value: String) { ("Long term debt", user.creditReportInfo.currentLongTermDebt.GBP) }
     var daysUntilNextReport: (title: String, value: String) { ("Days until next report", "\(user.creditReportInfo.daysUntilNextReport)") }
     
-    // MARK: - Priate properties
+    // MARK: - Private properties
     
     private var user: User
     

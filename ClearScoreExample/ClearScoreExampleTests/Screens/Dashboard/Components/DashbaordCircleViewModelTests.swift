@@ -10,11 +10,11 @@ import XCTest
 
 final class DashbaordCircleViewModelTests: XCTestCase {
 
-    private var sut: DashbaordCircleViewModel!
+    private var sut: DashboardCircleViewModel!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = DashbaordCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
+        sut = DashboardCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
     }
 
     override func tearDownWithError() throws {

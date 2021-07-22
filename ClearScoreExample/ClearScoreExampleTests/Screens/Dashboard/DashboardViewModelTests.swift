@@ -38,7 +38,7 @@ final class DashboardViewModelTests: XCTestCase {
         sut.fetchUser()
         sut.statePublisher
             .sink { state in
-                let viewModel = DashbaordCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
+                let viewModel = DashboardCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
                 XCTAssertEqual(state, DashboardViewModelState.dataAvailable(viewModel: viewModel))
                 XCTAssertEqual(self.sut.user, User.mock)
             }
