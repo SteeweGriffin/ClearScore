@@ -10,7 +10,22 @@ import Network
 import Combine
 
 protocol UserRepositoryType {
-    func fetchUser() -> AnyPublisher<User, NetworkError>
+    func fetchUser() -> AnyPublisher<User, UserRepositoryError>
+}
+
+enum UserRepositoryError: Error, Equatable {
+    
+    case networkError(_ error: Error)
+    case mapError
+    
+    static func == (lhs: UserRepositoryError, rhs: UserRepositoryError) -> Bool {
+        switch (lhs, rhs) {
+        case (mapError, mapError):return true
+        case (networkError(let lhsError), networkError(let rhsError)):
+            return lhsError.localizedDescription == rhsError.localizedDescription
+        default: return false
+        }
+    }
 }
 
 struct UserRepository: UserRepositoryType {
@@ -31,17 +46,17 @@ struct UserRepository: UserRepositoryType {
         self.userMapper = userMapper
     }
     
-    func fetchUser() -> AnyPublisher<User, NetworkError> {
+    func fetchUser() -> AnyPublisher<User, UserRepositoryError> {
         let endpoint = Endpoint(baseURL: NetworkConfiguration.baseURL, path: Path.creditValue, parameters: nil, method: .get)
         return networkClient.request(endPoint: endpoint)
             .tryMap { response -> User  in
                 guard let user = userMapper.map(body: response.payload) else {
-                    throw NetworkError.unavailableData
+                    throw UserRepositoryError.mapError
                 }
                 return user
             }
             .mapError { error in
-                return error as? NetworkError ?? NetworkError.unknown(error)
+                return error as? UserRepositoryError ?? UserRepositoryError.networkError(error)
             }
             .eraseToAnyPublisher()
     }

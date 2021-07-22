@@ -10,26 +10,46 @@ import Combine
 
 protocol DashboardViewModelType {
     var screenTitle: String { get }
+    var user: User? { get }
     var statePublisher: Published<DashboardViewModelState>.Publisher { get }
     func fetchUser()
 }
 
-enum DashboardViewModelState {
+enum DashboardViewModelState: Equatable {
     case idle
     case loading
     case error(message: String)
-    case dataAvailable(viewModel: User)
+    case dataAvailable(viewModel: DashboardCircleViewModelType)
+    
+    static func == (lhs: DashboardViewModelState, rhs: DashboardViewModelState) -> Bool {
+        switch (lhs, rhs) {
+        case (idle, idle),
+             (loading, loading),
+             (dataAvailable(_), dataAvailable(_)):
+            return true
+        case (error(let lhsMessage), error(let rhsMessage)):
+            return lhsMessage == rhsMessage
+        default: return false
+        }
+    }
 }
 
 final class DashboardViewModel: DashboardViewModelType {
 
+    // MARK: - Public properties
+    
     var statePublisher: Published<DashboardViewModelState>.Publisher { $state }
     var screenTitle: String { return "Dashboard" }
+    var user: User?
+    
+    // MARK: - Private properties
     
     private let repository: UserRepositoryType
     private var cancellables = Set<AnyCancellable>()
-    private var user: User?
+   
     @Published private var state: DashboardViewModelState = .idle
+    
+    // MARK: - Public methods
     
     init(repository: UserRepositoryType = UserRepository()) {
         self.repository = repository
@@ -47,7 +67,8 @@ final class DashboardViewModel: DashboardViewModelType {
                 }
         } receiveValue: { [weak self] user in
             self?.user = user
-            self?.state = .dataAvailable(viewModel: user)
+            let circleViewModel = DashbaordCircleViewModel(creditReportInfo: user.creditReportInfo)
+            self?.state = .dataAvailable(viewModel: circleViewModel)
         }.store(in: &cancellables)
 
     }

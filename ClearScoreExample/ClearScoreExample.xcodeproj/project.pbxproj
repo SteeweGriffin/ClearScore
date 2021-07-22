@@ -28,6 +28,15 @@
 		0B70B3C126A874C20020EAB9 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3C026A874C20020EAB9 /* NetworkConfiguration.swift */; };
 		0B70B3C326A886320020EAB9 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3C226A886320020EAB9 /* DashboardViewModel.swift */; };
 		0B70B3C526A886420020EAB9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3C426A886420020EAB9 /* DashboardViewController.swift */; };
+		0B70B3C826A95FC40020EAB9 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3C726A95FC40020EAB9 /* UserRepositoryTests.swift */; };
+		0B70B3CA26A95FED0020EAB9 /* MockUserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3C926A95FED0020EAB9 /* MockUserMapper.swift */; };
+		0B70B3CC26A960450020EAB9 /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3CB26A960450020EAB9 /* MockNetworkClient.swift */; };
+		0B70B3CF26A96F4D0020EAB9 /* DashboardCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3CE26A96F4D0020EAB9 /* DashboardCircleView.swift */; };
+		0B70B3D226A9820C0020EAB9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3D126A9820C0020EAB9 /* Configurable.swift */; };
+		0B70B3D426A982770020EAB9 /* DashboardCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3D326A982770020EAB9 /* DashboardCircleViewModel.swift */; };
+		0B70B3D626A993B10020EAB9 /* Tappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3D526A993B10020EAB9 /* Tappable.swift */; };
+		0B70B3DA26A9993E0020EAB9 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3D926A9993E0020EAB9 /* DashboardViewModelTests.swift */; };
+		0B70B3DC26A999A20020EAB9 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70B3DB26A999A20020EAB9 /* MockUserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +74,15 @@
 		0B70B3C026A874C20020EAB9 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		0B70B3C226A886320020EAB9 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		0B70B3C426A886420020EAB9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		0B70B3C726A95FC40020EAB9 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
+		0B70B3C926A95FED0020EAB9 /* MockUserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserMapper.swift; sourceTree = "<group>"; };
+		0B70B3CB26A960450020EAB9 /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		0B70B3CE26A96F4D0020EAB9 /* DashboardCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCircleView.swift; sourceTree = "<group>"; };
+		0B70B3D126A9820C0020EAB9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		0B70B3D326A982770020EAB9 /* DashboardCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCircleViewModel.swift; sourceTree = "<group>"; };
+		0B70B3D526A993B10020EAB9 /* Tappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tappable.swift; sourceTree = "<group>"; };
+		0B70B3D926A9993E0020EAB9 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		0B70B3DB26A999A20020EAB9 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,8 @@
 		0B44399226A6DD7A0065FD42 /* ClearScoreExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				0B70B3D726A9991F0020EAB9 /* Screens */,
+				0B70B3C626A95FAC0020EAB9 /* Repositories */,
 				0B70B3B326A861900020EAB9 /* Mocks */,
 				0B70B3B826A8628F0020EAB9 /* Models */,
 				0B70B3B026A860F30020EAB9 /* Navigation */,
@@ -171,6 +191,7 @@
 		0B70B38D26A8443F0020EAB9 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0B70B3CD26A96F360020EAB9 /* ViewComponents */,
 				0B70B3C226A886320020EAB9 /* DashboardViewModel.swift */,
 				0B70B3C426A886420020EAB9 /* DashboardViewController.swift */,
 			);
@@ -207,6 +228,8 @@
 			children = (
 				0B70B3A426A8524D0020EAB9 /* CaseIterableLastUnknown.swift */,
 				0B70B3A926A85C4E0020EAB9 /* Color.swift */,
+				0B70B3D126A9820C0020EAB9 /* Configurable.swift */,
+				0B70B3D526A993B10020EAB9 /* Tappable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -232,6 +255,9 @@
 			children = (
 				0B70B3B426A861A50020EAB9 /* MockNavigationController.swift */,
 				0B70B3B626A861F50020EAB9 /* MockUser.swift */,
+				0B70B3C926A95FED0020EAB9 /* MockUserMapper.swift */,
+				0B70B3CB26A960450020EAB9 /* MockNetworkClient.swift */,
+				0B70B3DB26A999A20020EAB9 /* MockUserRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -250,6 +276,39 @@
 				0B70B3BE26A872D50020EAB9 /* UserRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0B70B3C626A95FAC0020EAB9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3C726A95FC40020EAB9 /* UserRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0B70B3CD26A96F360020EAB9 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3CE26A96F4D0020EAB9 /* DashboardCircleView.swift */,
+				0B70B3D326A982770020EAB9 /* DashboardCircleViewModel.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		0B70B3D726A9991F0020EAB9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3D826A999270020EAB9 /* Dashboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0B70B3D826A999270020EAB9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				0B70B3D926A9993E0020EAB9 /* DashboardViewModelTests.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,16 +417,20 @@
 				0B70B39426A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift in Sources */,
 				0B44398126A6DD770065FD42 /* ViewController.swift in Sources */,
 				0B70B39626A845160020EAB9 /* User.swift in Sources */,
+				0B70B3D226A9820C0020EAB9 /* Configurable.swift in Sources */,
+				0B70B3CF26A96F4D0020EAB9 /* DashboardCircleView.swift in Sources */,
 				0B70B3C326A886320020EAB9 /* DashboardViewModel.swift in Sources */,
 				0B70B39226A844AB0020EAB9 /* MainRouter.swift in Sources */,
 				0B44397D26A6DD770065FD42 /* AppDelegate.swift in Sources */,
 				0B70B3A526A8524D0020EAB9 /* CaseIterableLastUnknown.swift in Sources */,
+				0B70B3D626A993B10020EAB9 /* Tappable.swift in Sources */,
 				0B70B3C526A886420020EAB9 /* DashboardViewController.swift in Sources */,
 				0B44397F26A6DD770065FD42 /* SceneDelegate.swift in Sources */,
 				0B70B3A726A854140020EAB9 /* UserMapper.swift in Sources */,
 				0B70B3BF26A872D50020EAB9 /* UserRepository.swift in Sources */,
 				0B70B3AA26A85C4E0020EAB9 /* Color.swift in Sources */,
 				0B70B3C126A874C20020EAB9 /* NetworkConfiguration.swift in Sources */,
+				0B70B3D426A982770020EAB9 /* DashboardCircleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +438,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B70B3DC26A999A20020EAB9 /* MockUserRepository.swift in Sources */,
+				0B70B3CA26A95FED0020EAB9 /* MockUserMapper.swift in Sources */,
 				0B70B3AF26A85F780020EAB9 /* ColorTests.swift in Sources */,
 				0B70B3B226A861250020EAB9 /* MainRouterTests.swift in Sources */,
+				0B70B3DA26A9993E0020EAB9 /* DashboardViewModelTests.swift in Sources */,
 				0B70B3B726A861F50020EAB9 /* MockUser.swift in Sources */,
 				0B70B3B526A861A50020EAB9 /* MockNavigationController.swift in Sources */,
+				0B70B3CC26A960450020EAB9 /* MockNetworkClient.swift in Sources */,
+				0B70B3C826A95FC40020EAB9 /* UserRepositoryTests.swift in Sources */,
 				0B70B3BA26A862A70020EAB9 /* UserMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

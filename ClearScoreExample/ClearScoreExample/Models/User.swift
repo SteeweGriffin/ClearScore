@@ -17,7 +17,7 @@ struct User: Codable {
         case unknown
     }
     
-    struct CreditReportInfo: Codable {
+    struct CreditReportInfo: Codable, Equatable {
         let score: Int
         let scoreBand: Int
         let maxScoreValue: Int
@@ -27,5 +27,12 @@ struct User: Codable {
         let currentShortTermCreditLimit: Int
         let currentLongTermDebt: Int
         let daysUntilNextReport: Int
+    }
+}
+
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.creditReportInfo == rhs.creditReportInfo
+            && lhs.personaType == rhs.personaType
     }
 }
