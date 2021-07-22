@@ -171,13 +171,12 @@ final class DashboardCircleView: UIView, Tappable {
 
 extension DashboardCircleView: Configurable {
     
-    func configure(_ input: DashboardCircleViewModelType?) {
-        guard let viewModel = input else { return }
-        self.viewModel = viewModel
-        titleLabel.text = viewModel.title
-        subtitleLabel.text = viewModel.subtitle
-        valueLabel.text = viewModel.valueString
-        valueCircle.strokeEnd = CGFloat(viewModel.valuePercentage)
+    func configure(_ input: DashboardCircleViewModelType) {
+        viewModel = input
+        titleLabel.text = input.title
+        subtitleLabel.text = input.subtitle
+        valueLabel.text = input.valueString
+        valueCircle.strokeEnd = CGFloat(input.valuePercentage)
         tapEnabled = true
     }
     

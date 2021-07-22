@@ -28,6 +28,10 @@ final class DashboardViewModelTests: XCTestCase {
         repository = nil
         try super.tearDownWithError()
     }
+    
+    func test_screenTitle() throws {
+        XCTAssertEqual(sut.screenTitle, "Dashboard")
+    }
 
     func test_fetchUser_success() throws {
         sut.fetchUser()

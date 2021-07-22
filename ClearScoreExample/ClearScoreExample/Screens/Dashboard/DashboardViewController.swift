@@ -53,7 +53,13 @@ final class DashboardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.fetchUser()
+        viewModel.statePublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                guard state == .idle else { return }
+                self?.viewModel.fetchUser()
+            }
+            .store(in : &cancellables)
     }
     
     // MARK: - Private methods
@@ -63,7 +69,7 @@ final class DashboardViewController: UIViewController {
         title = viewModel.screenTitle
         dashboardView.tapAction = { [weak self] in
             guard let user = self?.viewModel.user else { return }
-            print(user)
+            self?.router.displayDetail(user)
         }
         view.addSubview(dashboardView)
         NSLayoutConstraint.activate([dashboardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

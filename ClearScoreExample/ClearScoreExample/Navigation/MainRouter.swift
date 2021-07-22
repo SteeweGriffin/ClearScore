@@ -33,9 +33,8 @@ struct MainRouter: MainRouterProtocol {
     }
     
     func displayDetail(_ user: User) {
-//        let viewModel = RocketDetailViewModel(rocket)
-//        let controller = RocketDetailViewController(input: viewModel, navigation: self)
-        let controller = ViewController()
+        let viewModel = DetailViewModel(user: user)
+        let controller = DetailViewController(input: viewModel)
         navigation.pushController(controller, animated: true)
     }
 

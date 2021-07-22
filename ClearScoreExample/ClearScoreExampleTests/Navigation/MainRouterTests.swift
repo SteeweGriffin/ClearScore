@@ -38,7 +38,7 @@ final class MainRouterTests: XCTestCase {
         
         // THEN
         XCTAssertEqual(navigation.pushControllerCallsCount, 1)
-        XCTAssertTrue(navigation.expectedController is ViewController)
+        XCTAssertTrue(navigation.expectedController is DetailViewController)
     }
     
     func test_displayError() throws {

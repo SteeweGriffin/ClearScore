@@ -10,9 +10,15 @@
 		0B036D6326A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */; };
 		0B036D6526A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6426A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift */; };
 		0B036D6826A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6726A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift */; };
+		0B036D6A26A9DD6F00BD03D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6926A9DD6F00BD03D2 /* DetailViewController.swift */; };
+		0B036D6C26A9DDEE00BD03D2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6B26A9DDEE00BD03D2 /* DetailViewModel.swift */; };
+		0B036D6F26A9E13200BD03D2 /* TitleAndValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D6E26A9E13200BD03D2 /* TitleAndValueView.swift */; };
+		0B036D7126A9E16C00BD03D2 /* TitleAndValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D7026A9E16C00BD03D2 /* TitleAndValueViewModel.swift */; };
+		0B036D7326A9E44100BD03D2 /* Int+NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D7226A9E44100BD03D2 /* Int+NumberFormatter.swift */; };
+		0B036D7626A9FDFF00BD03D2 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D7526A9FDFF00BD03D2 /* DetailViewModelTests.swift */; };
+		0B036D7826A9FFA000BD03D2 /* IntNumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B036D7726A9FFA000BD03D2 /* IntNumberFormatterTests.swift */; };
 		0B44397D26A6DD770065FD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44397C26A6DD770065FD42 /* AppDelegate.swift */; };
 		0B44397F26A6DD770065FD42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44397E26A6DD770065FD42 /* SceneDelegate.swift */; };
-		0B44398126A6DD770065FD42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B44398026A6DD770065FD42 /* ViewController.swift */; };
 		0B44398626A6DD7A0065FD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B44398526A6DD7A0065FD42 /* Assets.xcassets */; };
 		0B44398926A6DD7A0065FD42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B44398726A6DD7A0065FD42 /* LaunchScreen.storyboard */; };
 		0B70B38926A6DE870020EAB9 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 0B70B38826A6DE870020EAB9 /* Network */; };
@@ -56,10 +62,16 @@
 		0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableLastUnknownTests.swift; sourceTree = "<group>"; };
 		0B036D6426A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensionTests.swift; sourceTree = "<group>"; };
 		0B036D6726A9D75100BD03D2 /* DashbaordCircleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordCircleViewModelTests.swift; sourceTree = "<group>"; };
+		0B036D6926A9DD6F00BD03D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0B036D6B26A9DDEE00BD03D2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		0B036D6E26A9E13200BD03D2 /* TitleAndValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndValueView.swift; sourceTree = "<group>"; };
+		0B036D7026A9E16C00BD03D2 /* TitleAndValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndValueViewModel.swift; sourceTree = "<group>"; };
+		0B036D7226A9E44100BD03D2 /* Int+NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+NumberFormatter.swift"; sourceTree = "<group>"; };
+		0B036D7526A9FDFF00BD03D2 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		0B036D7726A9FFA000BD03D2 /* IntNumberFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntNumberFormatterTests.swift; sourceTree = "<group>"; };
 		0B44397926A6DD770065FD42 /* ClearScoreExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScoreExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B44397C26A6DD770065FD42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B44397E26A6DD770065FD42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B44398026A6DD770065FD42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B44398526A6DD7A0065FD42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B44398826A6DD7A0065FD42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B44398A26A6DD7A0065FD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +130,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		0B036D6D26A9E09500BD03D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B036D6E26A9E13200BD03D2 /* TitleAndValueView.swift */,
+				0B036D7026A9E16C00BD03D2 /* TitleAndValueViewModel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B036D7426A9FDE500BD03D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0B036D7526A9FDFF00BD03D2 /* DetailViewModelTests.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		0B44397026A6DD770065FD42 = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +176,6 @@
 				0B70B38C26A844380020EAB9 /* Screens */,
 				0B70B38B26A843E90020EAB9 /* Resources */,
 				0B70B38A26A843D90020EAB9 /* Main */,
-				0B44398026A6DD770065FD42 /* ViewController.swift */,
 			);
 			path = ClearScoreExample;
 			sourceTree = "<group>";
@@ -215,6 +243,9 @@
 		0B70B38E26A844490020EAB9 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				0B036D6D26A9E09500BD03D2 /* Components */,
+				0B036D6926A9DD6F00BD03D2 /* DetailViewController.swift */,
+				0B036D6B26A9DDEE00BD03D2 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -244,6 +275,7 @@
 				0B70B3A926A85C4E0020EAB9 /* Color.swift */,
 				0B70B3D126A9820C0020EAB9 /* Configurable.swift */,
 				0B70B3D526A993B10020EAB9 /* Tappable.swift */,
+				0B036D7226A9E44100BD03D2 /* Int+NumberFormatter.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -253,6 +285,7 @@
 			children = (
 				0B70B3AE26A85F780020EAB9 /* ColorTests.swift */,
 				0B036D6226A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift */,
+				0B036D7726A9FFA000BD03D2 /* IntNumberFormatterTests.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -314,6 +347,7 @@
 		0B70B3D726A9991F0020EAB9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0B036D7426A9FDE500BD03D2 /* Detail */,
 				0B70B3D826A999270020EAB9 /* Dashboard */,
 			);
 			path = Screens;
@@ -432,20 +466,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B70B39426A844FE0020EAB9 /* UINavigationController+NavigationControllerProtocol.swift in Sources */,
-				0B44398126A6DD770065FD42 /* ViewController.swift in Sources */,
 				0B70B39626A845160020EAB9 /* User.swift in Sources */,
 				0B70B3D226A9820C0020EAB9 /* Configurable.swift in Sources */,
+				0B036D7326A9E44100BD03D2 /* Int+NumberFormatter.swift in Sources */,
 				0B70B3CF26A96F4D0020EAB9 /* DashboardCircleView.swift in Sources */,
 				0B70B3C326A886320020EAB9 /* DashboardViewModel.swift in Sources */,
+				0B036D7126A9E16C00BD03D2 /* TitleAndValueViewModel.swift in Sources */,
 				0B70B39226A844AB0020EAB9 /* MainRouter.swift in Sources */,
+				0B036D6C26A9DDEE00BD03D2 /* DetailViewModel.swift in Sources */,
 				0B44397D26A6DD770065FD42 /* AppDelegate.swift in Sources */,
 				0B70B3A526A8524D0020EAB9 /* CaseIterableLastUnknown.swift in Sources */,
+				0B036D6A26A9DD6F00BD03D2 /* DetailViewController.swift in Sources */,
 				0B70B3D626A993B10020EAB9 /* Tappable.swift in Sources */,
 				0B70B3C526A886420020EAB9 /* DashboardViewController.swift in Sources */,
 				0B44397F26A6DD770065FD42 /* SceneDelegate.swift in Sources */,
 				0B70B3A726A854140020EAB9 /* UserMapper.swift in Sources */,
 				0B70B3BF26A872D50020EAB9 /* UserRepository.swift in Sources */,
 				0B70B3AA26A85C4E0020EAB9 /* Color.swift in Sources */,
+				0B036D6F26A9E13200BD03D2 /* TitleAndValueView.swift in Sources */,
 				0B70B3C126A874C20020EAB9 /* NetworkConfiguration.swift in Sources */,
 				0B70B3D426A982770020EAB9 /* DashboardCircleViewModel.swift in Sources */,
 			);
@@ -458,9 +496,11 @@
 				0B70B3DC26A999A20020EAB9 /* MockUserRepository.swift in Sources */,
 				0B70B3CA26A95FED0020EAB9 /* MockUserMapper.swift in Sources */,
 				0B70B3AF26A85F780020EAB9 /* ColorTests.swift in Sources */,
+				0B036D7626A9FDFF00BD03D2 /* DetailViewModelTests.swift in Sources */,
 				0B70B3B226A861250020EAB9 /* MainRouterTests.swift in Sources */,
 				0B036D6326A9CD8800BD03D2 /* CaseIterableLastUnknownTests.swift in Sources */,
 				0B70B3DA26A9993E0020EAB9 /* DashboardViewModelTests.swift in Sources */,
+				0B036D7826A9FFA000BD03D2 /* IntNumberFormatterTests.swift in Sources */,
 				0B70B3B726A861F50020EAB9 /* MockUser.swift in Sources */,
 				0B036D6526A9D6AF00BD03D2 /* NavigationControllerExtensionTests.swift in Sources */,
 				0B70B3B526A861A50020EAB9 /* MockNavigationController.swift in Sources */,
