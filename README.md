@@ -1,5 +1,5 @@
 # ClearScore iOS test
-[ClearScore – iOS technical assessment](ClearScore - Technical Task.docx)
+[ClearScore – iOS technical assessment](ClearScore%20-%20Technical%20Task.docx)
 
 ##Implementation
 
