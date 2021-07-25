@@ -8,7 +8,7 @@
 import XCTest
 @testable import Network
 
-final class EndPointTests: XCTestCase {
+final class EndpointTests: XCTestCase {
 
     private var sut: Endpoint!
 

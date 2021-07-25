@@ -26,6 +26,8 @@ final class DashboardViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
         sut = nil
         repository = nil
+        cancellables.forEach { $0.cancel() }
+        cancellables = []
         try super.tearDownWithError()
     }
     

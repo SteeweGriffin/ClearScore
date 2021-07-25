@@ -31,6 +31,8 @@ final class UserRepositoryTests: XCTestCase {
         sut = nil
         networkClient = nil
         userMapper = nil
+        cancellables.forEach { $0.cancel() }
+        cancellables = []
         try super.tearDownWithError()
     }
 

@@ -9,14 +9,14 @@ import Foundation
 import Combine
 
 public protocol NetworkClientType: AnyObject {
-    func request(endPoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError>
+    func request(endpoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError>
 }
 
 public final class NetworkClient: NetworkClientType {
 
     // MARK: - Private properties
 
-    private let urlSession: URLSessionType
+    private let urlSession: URLSession
 
     private enum StatusCode {
         static let success = 0..<300
@@ -24,15 +24,15 @@ public final class NetworkClient: NetworkClientType {
 
     // MARK: - Public methods
 
-    public init(session: URLSessionType = URLSession.shared) {
+    public init(session: URLSession = URLSession.shared) {
         urlSession = session
     }
 
-    public func request(endPoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError> {
-        guard let request = endPoint.makeRequest() else {
+    public func request(endpoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError> {
+        guard let request = endpoint.makeRequest() else {
             return AnyPublisher(Fail<NetworkResponse, NetworkError>(error: NetworkError.unavailablePath))
         }
-        return urlSession.dataTaskPublisherWith(request: request)
+        return urlSession.dataTaskPublisher(for: request)
             .tryMap { (data, response) in
                 guard let urlResponse = response as? HTTPURLResponseType else {
                     throw NetworkError.unavailableResponse

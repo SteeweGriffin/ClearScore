@@ -21,7 +21,7 @@ final class MockNetworkClient: NetworkClientType {
         self.result = result
     }
     
-    func request(endPoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError> {
+    func request(endpoint: EndpointType) -> AnyPublisher<NetworkResponse, NetworkError> {
         requestEndpointCallsCount += 1
         return Result.Publisher(result).eraseToAnyPublisher()
     }

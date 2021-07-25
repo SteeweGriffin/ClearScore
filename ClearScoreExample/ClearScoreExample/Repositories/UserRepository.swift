@@ -48,7 +48,7 @@ struct UserRepository: UserRepositoryType {
     
     func fetchUser() -> AnyPublisher<User, UserRepositoryError> {
         let endpoint = Endpoint(baseURL: NetworkConfiguration.baseURL, path: Path.creditValue, parameters: nil, method: .get)
-        return networkClient.request(endPoint: endpoint)
+        return networkClient.request(endpoint: endpoint)
             .tryMap { response -> User  in
                 guard let user = userMapper.map(body: response.payload) else {
                     throw UserRepositoryError.mapError
