@@ -36,17 +36,23 @@ final class UserRepositoryTests: XCTestCase {
 
     func test_fetchUser_success() throws {
         
+        let expectedMapCallsCount = 1
+        var resultUser: User?
+        
         sut.fetchUser().sink(receiveCompletion: { completion in
             XCTAssertEqual(self.networkClient.requestEndpointCallsCount, 1)
             switch completion {
             case .failure(_):
                 XCTFail("Shouldn't receive failure")
             case .finished:
-                XCTAssertEqual(self.userMapper.mapCallsCount, 1)
+                break
             }
         }, receiveValue: { user in
-            XCTAssertEqual(user, User.mock)
+            resultUser = user
         }).store(in: &cancellables)
+        
+        XCTAssertEqual(expectedMapCallsCount, self.userMapper.mapCallsCount)
+        XCTAssertEqual(resultUser, User.mock)
     }
     
     func test_fetchUser_failure_NetworkError() throws {
@@ -55,18 +61,23 @@ final class UserRepositoryTests: XCTestCase {
         userMapper = MockUserMapper(result: User.mock)
         sut = UserRepository(networkClient: networkClient, userMapper: userMapper)
         
+        let expectedMapCallsCount = 0
+        var resultError: UserRepositoryError?
+        
         sut.fetchUser().sink(receiveCompletion: { completion in
             XCTAssertEqual(self.networkClient.requestEndpointCallsCount, 1)
             switch completion {
             case .failure(let error):
-                XCTAssertEqual(self.userMapper.mapCallsCount, 0)
-                XCTAssertEqual(error, UserRepositoryError.networkError(NetworkError.unavailablePath))
+                resultError = error
             case .finished:
                 XCTFail("Shouldn't receive finished")
             }
         }, receiveValue: { user in
             XCTFail("Shouldn't receive user")
         }).store(in: &cancellables)
+        
+        XCTAssertEqual(expectedMapCallsCount, self.userMapper.mapCallsCount)
+        XCTAssertEqual(resultError, UserRepositoryError.networkError(NetworkError.unavailablePath))
     }
     
     func test_fetchUser_failure_UserMapper() throws {
@@ -75,18 +86,23 @@ final class UserRepositoryTests: XCTestCase {
         userMapper = MockUserMapper(result: nil)
         sut = UserRepository(networkClient: networkClient, userMapper: userMapper)
         
+        let expectedMapCallsCount = 1
+        var resultError: UserRepositoryError?
+        
         sut.fetchUser().sink(receiveCompletion: { completion in
             XCTAssertEqual(self.networkClient.requestEndpointCallsCount, 1)
             switch completion {
             case .failure(let error):
-                XCTAssertEqual(self.userMapper.mapCallsCount, 1)
-                XCTAssertEqual(error, UserRepositoryError.mapError)
+                resultError = error
             case .finished:
                 XCTFail("Shouldn't receive finished")
             }
         }, receiveValue: { user in
             XCTFail("Shouldn't receive user")
         }).store(in: &cancellables)
+        
+        XCTAssertEqual(expectedMapCallsCount, self.userMapper.mapCallsCount)
+        XCTAssertEqual(resultError, UserRepositoryError.mapError)
     }
 
 }

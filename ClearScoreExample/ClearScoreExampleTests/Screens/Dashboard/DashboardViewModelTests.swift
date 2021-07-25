@@ -35,27 +35,39 @@ final class DashboardViewModelTests: XCTestCase {
 
     func test_fetchUser_success() throws {
         sut.fetchUser()
-        sut.fetchUser()
+        
+        var resultUser: User?
+        var resultState: DashboardViewModelState?
+        
         sut.statePublisher
             .sink { state in
-                let viewModel = DashboardCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
-                XCTAssertEqual(state, DashboardViewModelState.dataAvailable(viewModel: viewModel))
-                XCTAssertEqual(self.sut.user, User.mock)
+                resultUser = self.sut.user
+                resultState = state
             }
             .store(in : &cancellables)
+        
+        let viewModel = DashboardCircleViewModel(creditReportInfo: User.mock.creditReportInfo)
+        XCTAssertEqual(resultState, DashboardViewModelState.dataAvailable(viewModel: viewModel))
+        XCTAssertEqual(resultUser, User.mock)
     }
     
     func test_fetchUser_failure() throws {
         repository = MockUserRepository(result: failureResult)
         sut = DashboardViewModel(repository: repository)
         
+        var resultUser: User?
+        var resultState: DashboardViewModelState?
+        
         sut.fetchUser()
         sut.statePublisher
             .sink { state in
-                XCTAssertNil(self.sut.user)
-                XCTAssertEqual(state, DashboardViewModelState.error(message: "The operation couldn’t be completed. (ClearScoreExample.UserRepositoryError error 1.)"))
+                resultUser = self.sut.user
+                resultState = state
             }
             .store(in : &cancellables)
+        
+        XCTAssertNil(resultUser)
+        XCTAssertEqual(resultState, DashboardViewModelState.error(message: "The operation couldn’t be completed. (ClearScoreExample.UserRepositoryError error 1.)"))
 
     }
 }
