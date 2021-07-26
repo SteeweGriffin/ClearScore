@@ -36,12 +36,11 @@ As you can see in the code I didn't use any storyboard or XIB, this doesn't mean
 
 ### Tests
 
-I tried to have good test coverage (of course 100% of coverage doesn't mean the tests are good or vice versa, but it is at least the first sign of code robustness), I wrote tests for almost all the business logic. I left UI untested because I think this is a choice that should be taken considering many factors in the tech team.
+I tried to have good test coverage (of course 100% of coverage doesn't mean the tests are good or vice versa, but it is at least the first sign of code robustness), I wrote tests for all the business logic. I left UI untested because I think this is a choice that should be taken considering many factors by the tech team.
 The team could consider using native UITest for an E2E or just use Snapshot tests.
 
 ## TODO with more time
 
-- NetworkClient test
 - Persistance
 - User friendly error handling
 - Snapshot tests
